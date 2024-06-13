@@ -10,7 +10,7 @@ public class MascotaService {
 
     @Autowired
     private MascotaRepository mascotaRepository;
-    public Mascota obtenerMascotaPorId(long id) {
-        return mascotaRepository.getReferenceById(id);
+    public Mascota obtenerMascotaPorId(long idMascota) {
+        return mascotaRepository.getReferenceById(idMascota);
     }
 }

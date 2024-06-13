@@ -19,6 +19,6 @@ public class UsuarioController {
     @GetMapping("/")
     public String getUsuarioById(){
         Usuario usuarioSolicitado = usuarioService.obtenerUsuarioPorId(1L);
-        return "Hola soy " + usuarioSolicitado.getNombre();
+        return "Hola soy " + usuarioSolicitado.getUsuarioId();
     }
 }

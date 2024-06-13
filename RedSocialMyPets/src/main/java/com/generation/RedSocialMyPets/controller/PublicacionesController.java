@@ -1,6 +1,6 @@
 package com.generation.RedSocialMyPets.controller;
 
-import com.generation.RedSocialMyPets.models.Publicaciones;
+import com.generation.RedSocialMyPets.models.Publicacion;
 import com.generation.RedSocialMyPets.service.PublicacionesService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ public class PublicacionesController {
 
     @GetMapping("/")
     public String getPublicacionById(){
-        Publicaciones publicacionSolicitado = publicacionesService.obtenerPublicacionPorId(1L);
-        return "Este era el mensaje" + publicacionSolicitado.getContenido();
+        Publicacion publicacionSolicitado = publicacionesService.obtenerPublicacionPorId(1L);
+        return "Este era el mensaje" + publicacionSolicitado.getPublicacionId();
     }
 }

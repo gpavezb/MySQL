@@ -1,5 +1,4 @@
 package com.generation.RedSocialMyPets.controller;
-
 import com.generation.RedSocialMyPets.models.Mascota;
 import com.generation.RedSocialMyPets.service.MascotaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +17,6 @@ public class MascotasController {
     @GetMapping("/")
     public String getMascotataById(){
         Mascota mascotaSolicitada = mascotaService.obtenerMascotaPorId(1L);
-        return "La mascota se llama " + mascotaSolicitada.getNombre();
+        return "La mascota se llama " + mascotaSolicitada.getMascotaId();
     }
 }

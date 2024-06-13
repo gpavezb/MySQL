@@ -1,6 +1,5 @@
 package com.generation.RedSocialMyPets.controller;
-
-import com.generation.RedSocialMyPets.models.Likes;
+import com.generation.RedSocialMyPets.models.Like;
 import com.generation.RedSocialMyPets.service.LikesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +15,9 @@ public class LikesController {
 
     @GetMapping("/")
     public String getLikeById(){
-        Likes likeSolicitado = likesService.obtenerLikePorId(1L);
-        return "La publicación tuvo " + likeSolicitado.getId();
+        Like likeSolicitado = likesService.obtenerLikePorId(1L);
+        return "La publicación tuvo " + likeSolicitado.getLikeId();
     }
 }
+
+
